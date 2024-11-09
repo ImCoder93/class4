@@ -1,4 +1,5 @@
 import pgzrun
+import random 
 
 WIDTH = 500
 HEIGHT = 500
@@ -15,8 +16,12 @@ def on_mouse_down(pos):
     global message
     if alien.collidepoint(pos):
         message= 'good shot'
+        alien.x=random.randint(50,450)
+        alien.y=random.randint(50,450)
+
+
     else:
-        messgae= 'missed shot'                                                      
+        message= 'missed shot'                                                      
 
 
 
